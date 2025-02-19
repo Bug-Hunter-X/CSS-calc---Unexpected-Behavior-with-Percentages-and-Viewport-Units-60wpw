@@ -1,0 +1,16 @@
+/* bugSolution.css */
+#myElement {
+  width: 50%; /* Initial width */
+}
+
+<script>
+  function updateWidth() {
+    const element = document.getElementById('myElement');
+    const viewportWidth = window.innerWidth;
+    const calculatedWidth = Math.max(0, 0.5 * window.innerWidth - 0.1 * viewportWidth) + 'px';
+    element.style.width = calculatedWidth;
+  }
+
+  window.addEventListener('resize', updateWidth);
+  updateWidth();
+</script>
